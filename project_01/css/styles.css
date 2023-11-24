@@ -51,9 +51,33 @@ body {
 /* Estilos de la barra de navegación */
 .nav {
   grid-area: nav;
-  border: 5px solid red;
-  background-color: lightgray;
+  background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
 }
+.nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.nav li {
+  padding: 10px;
+  color: white;
+}
+.nav a {
+  display: block;
+  margin-left: 30px;
+  margin-right: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: lighter;
+  transition: all 300ms;
+}
+
+.nav a:hover {
+  transform: scale(1.1, 1.1);
+}
+/* Estilos de los contenidos principal */
 .content {
   grid-area: content;
   border: 5px solid green;
