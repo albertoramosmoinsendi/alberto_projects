@@ -80,8 +80,25 @@ body {
 /* Estilos de los contenidos principal */
 .content {
   grid-area: content;
-  border: 5px solid green;
-  background-color: lightgreen;
+  background: #f6f7f9;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.movie-item {
+  background: white;
+  width: calc((100% - 80px));
+  border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #ddd;
+  margin: 20px;
+  margin-left: 20px;
+  margin-right: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 25px;
 }
 .lateral {
   grid-area: lateral;
