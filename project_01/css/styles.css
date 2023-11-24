@@ -100,10 +100,62 @@ body {
   padding-left: 20px;
   padding-right: 25px;
 }
+/* Estilos de los botones  */
+button,
+input[type="submit"],
+input[type="button"] {
+  background: #0b70e1;
+  color: white;
+  border: 0;
+  outline: 0;
+  padding: 15px;
+  border-radius: 3px;
+  width: 100px;
+  margin-top: 15px;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.edit:hover {
+  background: #e77b00;
+}
+.delete:hover {
+  background: #9b0202;
+}
+/* Estilos del aside lateral  */
 .lateral {
   grid-area: lateral;
-  border: 5px solid brown;
-  background-color: lightsalmon;
+  background: #f6f7f9;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+}
+.lateral > div {
+  box-sizing: border-box;
+  width: 90%;
+  margin: 20px;
+  padding-top: 10px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px #ddd;
+}
+
+.lateral input[type="text"],
+.lateral input[type="text"],
+.lateral textarea {
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  background: #f6f7f9;
+  color: #454545;
+  width: 80%;
+  opacity: 4;
+  outline: 0;
+  border-color: transparent;
 }
 .footer {
   grid-area: footer;
