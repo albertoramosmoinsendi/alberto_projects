@@ -216,3 +216,6 @@ input[type="button"] {
     width: 80%;
   }
 }
+.encontrado {
+  color: red;
+}
