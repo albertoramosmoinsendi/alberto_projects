@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 export const HeaderNav = () => {
   return (
-    <header>
+    <header className="header">
       <div className="logo">
-        <span>V</span>
+        <span>UTW</span>
         <h3>User Test Web</h3>
       </div>
       <nav>
