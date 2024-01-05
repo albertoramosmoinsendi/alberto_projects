@@ -76,7 +76,7 @@ code {
 .footer {
   text-align: center;
   font-size: 14px;
-  margin-top: 35px;
+  margin-top: 80px;
   border-top: 3px solid black;
   padding-top: 45px;
   background: #f5f5f5;
@@ -87,4 +87,50 @@ code {
 
 .content {
   min-height: 400px;
+}
+
+.home h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 0;
+  margin-top: 80px;
+}
+
+.home strong {
+  color: #fa4529;
+}
+
+.home h2 {
+  font-weight: lighter;
+  color: rgb(57, 56, 56);
+}
+
+.home a {
+  background-color: #fa4529;
+  color: white;
+  border-radius: 5px;
+  padding: 7px;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+.home a:hover {
+  background-color: #444;
+}
+.page .heading,
+.home .heading {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: black;
+}
+
+.home p {
+  color: #444;
+}
+
+.page .heading {
+  font-size: 55px;
+  font-weight: bold;
 }
