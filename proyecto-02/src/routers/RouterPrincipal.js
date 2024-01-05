@@ -58,7 +58,7 @@ export const RouterPrincipal = () => {
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/articulos" element={<Articulos />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/persona/:nombre/:apellidos" element={<Persona />} />
+          <Route path="/persona/:nombre/:apellido" element={<Persona />} />
           <Route path="/persona/:nombre/" element={<Persona />} />
           <Route path="/persona" element={<Persona />} />
           <Route
