@@ -6,9 +6,12 @@ export const Persona = () => {
 
   return (
     <div>
-      <h1>
-        Pagina de Persona: {nombre} {apellidos}
-      </h1>
+      {!nombre && <h1> No hay ninguna persona que mostrar</h1>}
+      {nombre && (
+        <h1>
+          Pagina de Persona: {nombre} {apellidos}
+        </h1>
+      )}
       <p>Esta es la página de persona</p>
     </div>
   );

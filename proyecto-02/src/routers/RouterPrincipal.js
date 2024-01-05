@@ -48,14 +48,13 @@ export const RouterPrincipal = () => {
         {/* Cargar components */}
         {/* Aqui se carga el componente que coincide con el path */}
         <Routes>
-          <Route path="/" element={<Inicio />}></Route>
-          <Route path="/inicio" element={<Inicio />}></Route>
-          <Route path="/articulos" element={<Articulos />}></Route>
-          <Route path="/contacto" element={<Contacto />}></Route>
-          <Route
-            path="/persona/:nombre/:apellidos"
-            element={<Persona />}
-          ></Route>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/inicio" element={<Inicio />} />
+          <Route path="/articulos" element={<Articulos />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/persona/:nombre/:apellidos" element={<Persona />} />
+          <Route path="/persona/:nombre/" element={<Persona />} />
+          <Route path="/persona" element={<Persona />} />
           {/* '*'' Cualquier ruta que no vaya a existir */}
           <Route path="*" element={<Error />} />
         </Routes>
