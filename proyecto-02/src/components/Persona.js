@@ -2,11 +2,13 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 export const Persona = () => {
-  const params = useParams();
+  const { nombre, apellidos } = useParams();
 
   return (
     <div>
-      <h1>Pagina de Persona</h1>
+      <h1>
+        Pagina de Persona: {nombre} {apellidos}
+      </h1>
       <p>Esta es la página de persona</p>
     </div>
   );

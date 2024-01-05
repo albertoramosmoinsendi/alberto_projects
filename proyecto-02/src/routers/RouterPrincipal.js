@@ -52,7 +52,10 @@ export const RouterPrincipal = () => {
           <Route path="/inicio" element={<Inicio />}></Route>
           <Route path="/articulos" element={<Articulos />}></Route>
           <Route path="/contacto" element={<Contacto />}></Route>
-          <Route path="/persona/:nombre" element={<Persona />}></Route>
+          <Route
+            path="/persona/:nombre/:apellidos"
+            element={<Persona />}
+          ></Route>
           {/* '*'' Cualquier ruta que no vaya a existir */}
           <Route path="*" element={<Error />} />
         </Routes>
