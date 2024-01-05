@@ -219,3 +219,9 @@ button:hover {
   display: block;
   margin-top: 0px;
 }
+
+.page-work .mask {
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px #ccc;
+}

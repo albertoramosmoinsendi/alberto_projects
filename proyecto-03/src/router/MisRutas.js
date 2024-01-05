@@ -7,6 +7,7 @@ import { Portafolio } from "../components/Portafolio";
 import { Servicios } from "../components/Servicios";
 import { HeaderNav } from "../components/layout/HeaderNav";
 import { Footer } from "../components/layout/Footer";
+import { Proyecto } from "../components/Proyecto";
 
 export const MisRutas = () => {
   return (
@@ -21,6 +22,7 @@ export const MisRutas = () => {
           <Route path="/curriculum" element={<Curriculum />} />
           <Route path="/portafolio" element={<Portafolio />} />
           <Route path="/servicios" element={<Servicios />} />
+          <Route path="/portafolio/proyecto/:id" element={<Proyecto />} />
           <Route
             path="*"
             element={
