@@ -6,11 +6,17 @@ import {
   BrowserRouter,
   Navigate,
 } from "react-router-dom";
+
 import { Inicio } from "../components/Inicio";
 import { Articulos } from "../components/Articulos";
 import { Contacto } from "../components/Contacto";
 import { Error } from "../components/Error";
 import { Persona } from "../components/Persona";
+import { PanelControl } from "../components/PanelControl";
+import { InicioPanel } from "../components/panel/InicioPanel";
+import { Acerca } from "../components/panel/Acerca";
+import { Gestion } from "../components/panel/Gestion";
+import { Crear } from "../components/panel/Crear";
 
 export const RouterPrincipal = () => {
   return (
@@ -47,6 +53,22 @@ export const RouterPrincipal = () => {
               Contacto
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/persona"
+              className={({ isActive }) => (isActive ? "activado" : "")}
+            >
+              Persona
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/panel"
+              className={({ isActive }) => (isActive ? "activado" : "")}
+            >
+              Panel de Control
+            </NavLink>
+          </li>
         </ul>
       </nav>
 
@@ -65,6 +87,13 @@ export const RouterPrincipal = () => {
             path="/redirigir"
             element={<Navigate to="persona/user/test" />}
           />
+          <Route path="/panel/*" element={<PanelControl />}>
+            <Route index element={<InicioPanel />} />
+            <Route path="inicio" element={<InicioPanel />} />
+            <Route path="acerca-de" element={<Acerca />} />
+            <Route path="gestion-usuarios" element={<Gestion />} />
+            <Route path="crear-articulos" element={<Crear />} />
+          </Route>
           {/* '*'' Cualquier ruta que no vaya a existir */}
           <Route path="*" element={<Error />} />
         </Routes>
