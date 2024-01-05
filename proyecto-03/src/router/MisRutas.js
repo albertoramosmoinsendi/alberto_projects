@@ -1,5 +1,11 @@
 import React from "react";
-import { Routes, Route, BrowserRouter, NavLink } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  BrowserRouter,
+  NavLink,
+  Navigate,
+} from "react-router-dom";
 import { Inicio } from "../components/Inicio";
 import { Contacto } from "../components/Contacto";
 import { Curriculum } from "../components/Curriculum";
@@ -13,19 +19,20 @@ export const MisRutas = () => {
     <BrowserRouter>
       {/* HEADER Y NAVEGACION */}
       <HeaderNav />
-
-      {/*  CONTENIDO CENTRAL */}
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/inicio" element={<Inicio />} />
-        <Route path="/contacto" element={<Contacto />} />
-        <Route path="/curriculum" element={<Curriculum />} />
-        <Route path="/portafolio" element={<Portafolio />} />
-        <Route path="/servicios" element={<Servicios />} />
-      </Routes>
+      <section className="content">
+        <Routes>
+          <Route path="/" element={<Navigate to="/inicio" />} />
+          <Route path="/inicio" element={<Inicio />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/curriculum" element={<Curriculum />} />
+          <Route path="/portafolio" element={<Portafolio />} />
+          <Route path="/servicios" element={<Servicios />} />
+        </Routes>
+        {/*  CONTENIDO CENTRAL */}
+      </section>
 
       {/* FOOTER */}
-      <hr />
+
       <Footer />
     </BrowserRouter>
   );
