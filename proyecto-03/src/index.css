@@ -19,13 +19,28 @@ code {
 
 .header {
   display: flex;
-  height: 132px;
   justify-content: center;
   align-items: center;
+  list-style: none;
+  height: 132px;
+  border-bottom: 3px solid black;
+  margin-bottom: 35px;
 }
 
 .hader .logo {
   flex-grow: 2;
+  display: flex;
+}
+.header .logo span {
+  font-size: 50px;
+  display: contents;
+  font-weight: bolder;
+}
+
+.header .logo h3 {
+  flex-basis: 40px;
+  font-weight: lighter;
+  display: contents;
 }
 
 .header nav {
@@ -34,10 +49,10 @@ code {
 
 .header nav ul {
   height: 132px;
+  list-style: none;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  list-style: none;
 }
 
 .header li {

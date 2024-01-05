@@ -5,7 +5,7 @@ export const HeaderNav = () => {
   return (
     <header className="header">
       <div className="logo">
-        <span>UTW</span>
+        <span>U</span>
         <h3>User Test Web</h3>
       </div>
       <nav>
