@@ -1,14 +1,37 @@
-import React, { memo } from "react";
+import React, { memo, useEffect, useState } from "react";
 
-export const Empleados = memo(() => {
+export const Empleados = memo(({ page }) => {
+  const [empleados, setEmpleados] = useState([]);
+
+  const conseguirEmpleados = async (page) => {
+    const url = "https://reqres.in/api/users?page=" + page;
+    console.log("url", url);
+    const peticion = await fetch(url);
+    const { data: empleados } = await peticion.json();
+    setEmpleados(empleados);
+    console.log("Se ejecutó la petición ajax");
+    // Sin el useMemo se ejecuta varias veces la petición AJAX (4 veces) que
+    // depende de los estados, a parte de los estados y los cambios de la vista
+    // de Gestión (+20). Con useMemo pasa a
+  };
+
+  useEffect(() => {
+    conseguirEmpleados(page);
+  }, [page]);
+
   return (
     <div>
       <h1>Empleados</h1>
-      <p>
-        Memorizamos absolutamente todo lo que devuelve este componente para
-        evitar re-renders que no queremos. Solo se va a actualizar la vista de
-        Gestión, no la de Empleados
-      </p>
+      <ul className="empleados">
+        {empleados.length >= 1 &&
+          empleados.map((empleado) => {
+            return (
+              <li key={empleado.id}>
+                {empleado.first_name + " " + empleado.last_name}
+              </li>
+            );
+          })}
+      </ul>
     </div>
   );
 });
