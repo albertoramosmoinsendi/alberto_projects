@@ -41,3 +41,24 @@ input[type="text"] {
   padding: 20px;
   width: 50%;
 }
+
+input[type="submit"] {
+  width: 15%;
+  padding: 22px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+input[type="submit"]:hover {
+  opacity: 1;
+}
+
+.tareas-container {
+  width: 80%;
+}
