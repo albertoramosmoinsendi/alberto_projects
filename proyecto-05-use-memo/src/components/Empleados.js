@@ -19,6 +19,10 @@ export const Empleados = memo(({ page }) => {
     conseguirEmpleados(page);
   }, [page]);
 
+  useEffect(() => {
+    console.log("Vista de Empleados actualizada");
+  }, [empleados]);
+
   return (
     <div>
       <h1>Empleados</h1>

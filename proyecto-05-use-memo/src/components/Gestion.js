@@ -13,6 +13,10 @@ export const Gestion = () => {
     setNombre(e.target.value);
   };
 
+  useEffect(() => {
+    console.log("Vista de gestion actualizada");
+  }, [nombre, page]);
+
   return (
     <div>
       <h1>Nombre del gestor: {nombre}</h1>
