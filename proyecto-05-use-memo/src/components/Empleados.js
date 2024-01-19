@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from "react";
 
-export const Empleados = memo(({ page }) => {
+export const Empleados = memo(({ page, mensaje }) => {
   const [empleados, setEmpleados] = useState([]);
 
   const conseguirEmpleados = async (page) => {
@@ -21,6 +21,7 @@ export const Empleados = memo(({ page }) => {
 
   useEffect(() => {
     console.log("Vista de Empleados actualizada");
+    mensaje();
   }, [empleados]);
 
   return (
